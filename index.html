@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="Verlgen entdeckt clevere Gadgets, Gaming-Zubehör und Ideen für deinen Alltag.">
+<title>VERLGEN — Discover something better</title>
+<style>
+:root{--bg:#080d18;--text:#f3f7ff;--muted:#a8b8ce;--blue:#8bcaff;--line:rgba(220,238,255,.17);--glass:rgba(255,255,255,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 4%,rgba(37,105,183,.27),transparent 36%),radial-gradient(ellipse at 88% 26%,rgba(80,53,164,.19),transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(circle at 28% 35%,rgba(57,159,255,.13),transparent 22%),radial-gradient(circle at 74% 60%,rgba(119,99,255,.12),transparent 24%);filter:blur(40px);animation:ambient 18s ease-in-out infinite alternate}
+@keyframes ambient{to{transform:translate3d(2%,-2%,0) scale(1.08)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}
+.glass{background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.035) 56%,rgba(137,196,255,.08));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 18px 55px rgba(0,0,0,.23);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%)}
+header{position:sticky;top:10px;z-index:10;margin:10px auto 0;width:min(1120px,calc(100% - 20px));border-radius:22px;padding:11px 15px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.19em}.logo{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,rgba(139,203,255,.3),rgba(255,255,255,.04));border:1px solid rgba(190,225,255,.35);color:var(--blue);box-shadow:0 0 25px rgba(84,163,255,.13)}
+nav{display:flex;gap:22px;color:#c2d0e2;font-size:13px}nav a:hover{color:white}.right{display:flex;align-items:center;gap:9px}.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:9px 12px;background:rgba(0,0,0,.12);width:165px}.search input{background:none;border:0;outline:0;color:white;width:100%;min-width:0;font-size:12px}.search input::placeholder{color:#91a1b8}.menu{display:none;background:transparent;color:white;border:0;font-size:22px}
+.hero{padding:72px 0 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:99px;color:#b9ddff;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.dot{width:6px;height:6px;background:#8bcaff;border-radius:50%;box-shadow:0 0 12px #8bcaff}
+h1{font-size:clamp(45px,7vw,78px);line-height:.98;letter-spacing:-.065em;margin:22px 0 20px;max-width:650px}h1 span{background:linear-gradient(100deg,#fff 8%,#b9dcff 48%,#9b91ff 94%);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{color:var(--muted);font-size:15px;line-height:1.8;max-width:520px}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.btn{border-radius:14px;padding:13px 17px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}.btn:hover{transform:translateY(-2px);border-color:rgba(170,218,255,.5)}.primary{background:linear-gradient(120deg,#e3f3ff,#8bcaff);color:#071221;border-color:rgba(255,255,255,.55);box-shadow:0 8px 30px rgba(77,161,255,.19)}.secondary{background:rgba(255,255,255,.055)}
+.hero-visual{position:relative;min-height:390px;display:grid;place-items:center}.orb{position:absolute;width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,rgba(108,196,255,.18),rgba(127,93,255,.12));filter:blur(5px);box-shadow:0 0 90px rgba(60,139,255,.16)}
+.feature-card{position:relative;width:min(100%,410px);border-radius:28px;padding:13px;transform:rotate(1.5deg);animation:float 7s ease-in-out infinite}.feature-img{height:300px;border-radius:19px;overflow:hidden;position:relative;background:linear-gradient(140deg,#17263d,#0b1322)}.feature-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}.feature-img:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,10,20,.82),transparent 62%),linear-gradient(135deg,rgba(139,203,255,.15),transparent 50%)}.feature-overlay{position:absolute;bottom:18px;left:18px;right:18px;z-index:1}.feature-overlay small{color:#b6d8ff;text-transform:uppercase;letter-spacing:.16em;font-size:10px}.feature-overlay h3{margin:8px 0 5px;font-size:26px;letter-spacing:-.04em}.feature-overlay p{margin:0;color:#d0dced;font-size:12px}.float-pill{position:absolute;right:-8px;top:28px;border-radius:17px;padding:13px 15px;font-size:12px;transform:rotate(4deg)}.float-pill strong{display:block;font-size:14px;margin-bottom:3px}.float-bottom{position:absolute;bottom:15px;left:-9px;border-radius:16px;padding:12px 14px;font-size:11px;transform:rotate(-4deg)}.float-bottom b{color:#a8dcff}
+.section{padding:35px 0 22px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.kicker{font-size:10px;color:#9bcfff;text-transform:uppercase;letter-spacing:.19em}.section h2{font-size:clamp(27px,4vw,37px);letter-spacing:-.045em;margin:8px 0 0}.sub{color:var(--muted);font-size:13px;line-height:1.65;max-width:450px;margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:19px 0}.filter{border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.035);color:#c2d0e2;padding:9px 14px;font-size:12px;cursor:pointer}.filter.active,.filter:hover{background:rgba(139,203,255,.16);border-color:rgba(139,203,255,.4);color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.product{border-radius:22px;overflow:hidden;transition:transform .25s,border-color .25s}.product:hover{transform:translateY(-5px);border-color:rgba(139,203,255,.35)}.product-img{height:190px;position:relative;background:linear-gradient(135deg,#17253a,#0b1423);overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.product:hover .product-img img{transform:scale(1.045)}.tag{position:absolute;top:12px;left:12px;padding:7px 9px;border-radius:99px;background:rgba(8,14,26,.68);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);font-size:10px;color:#d7eaff}.product-body{padding:16px}.product-body h3{font-size:16px;margin:0 0 8px;letter-spacing:-.025em}.product-body p{color:var(--muted);font-size:12px;line-height:1.65;margin:0 0 15px;min-height:40px}.product-foot{display:flex;align-items:center;justify-content:space-between;gap:8px}.product-foot span{font-size:11px;color:#a8d5ff}.mini-btn{border:1px solid rgba(139,203,255,.28);background:rgba(139,203,255,.1);border-radius:11px;padding:9px 11px;color:#e8f5ff;font-size:11px;cursor:pointer}.mini-btn:hover{background:rgba(139,203,255,.2)}
+.promo{margin:55px 0 36px;border-radius:26px;padding:28px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;position:relative;overflow:hidden}.promo:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:7%;top:-130px;background:rgba(89,156,255,.16);filter:blur(30px);pointer-events:none}.promo h2{font-size:clamp(24px,4vw,34px);letter-spacing:-.045em;margin:8px 0}.promo p{color:var(--muted);font-size:13px;line-height:1.7;max-width:580px;margin:0}.socials{display:flex;gap:9px;flex-wrap:wrap}.social{padding:11px 13px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.055);font-size:12px;white-space:nowrap}
+footer{border-top:1px solid rgba(255,255,255,.09);padding:24px 0 35px;color:#8596ad;font-size:11px;line-height:1.8}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footlinks{display:flex;gap:16px;flex-wrap:wrap}.notice{margin-top:12px;color:#8193ac;font-size:10px;line-height:1.6}.empty{display:none;color:var(--muted);font-size:13px;padding:20px}
+@media(max-width:760px){nav{display:none;position:absolute;top:65px;left:0;right:0;padding:17px;border-radius:18px;flex-direction:column;gap:16px}.nav-open nav{display:flex}.menu{display:block}.search{width:140px}.hero{grid-template-columns:1fr;padding-top:55px;gap:12px}.hero-visual{min-height:350px}.feature-card{max-width:390px}.feature-img{height:270px}.float-pill{right:0}.float-bottom{left:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-img{height:160px}.promo{grid-template-columns:1fr;padding:23px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:460px){.wrap{width:calc(100% - 24px)}header{width:calc(100% - 16px);padding:9px 10px}.brand{font-size:13px;letter-spacing:.14em}.logo{width:32px;height:32px}.search{width:112px;padding:8px}.search input{font-size:11px}.hero{padding-top:44px}h1{font-size:48px}.lead{font-size:14px}.hero-visual{min-height:315px}.feature-img{height:240px}.grid{grid-template-columns:1fr}.product-img{height:210px}.product-body p{min-height:0}.float-pill{right:-1px;top:17px}.float-bottom{bottom:5px}.section{padding-top:26px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="glass" id="top">
+  <a class="brand" href="#top" aria-label="Verlgen Startseite"><span class="logo">V✦</span><span>VERLGEN</span></a>
+  <nav id="nav">
+    <a href="#discover">Entdecken</a><a href="#categories">Kategorien</a><a href="#pinterest">Pinterest</a>
+  </nav>
+  <div class="right">
+    <label class="search" aria-label="Produkte suchen">⌕ <input id="search" type="search" placeholder="Suchen …"></label>
+    <button class="menu" id="menu" aria-label="Menü öffnen">☰</button>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow glass"><span class="dot"></span> YOUR NEXT FAVORITE FIND</div>
+      <h1>Discover<br><span>something better.</span></h1>
+      <p class="lead">Clever gadgets, Gaming-Essentials und kleine Ideen, die deinen Alltag besser machen. Entdecke neue Favoriten – ausgewählt für neugierige Köpfe.</p>
+      <div class="actions"><a class="btn primary" href="#discover">Produkte entdecken <span>↗</span></a><a class="btn secondary" href="#categories">Kategorien ansehen</a></div>
+      <p class="notice">Unabhängige Produktentdeckungen. Preise und Verfügbarkeit können sich beim Anbieter ändern.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"></div>
+      <div class="feature-card glass">
+        <div class="feature-img">
+          <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85" alt="Gaming-Setup mit Monitor und stimmungsvoller Beleuchtung" onerror="this.style.display='none'">
+          <div class="feature-overlay"><small>THE SETUP EDIT</small><h3>Level up your space.</h3><p>Ideen für ein Setup, das zu dir passt.</p></div>
+        </div>
+      </div>
+      <div class="float-pill glass"><strong>Curated finds ✦</strong><span style="color:#a9bbd2">Ausgewählte Ideen</span></div>
+      <div class="float-bottom glass">✧ Made for curious minds <b>· Verlgen</b></div>
+    </div>
+  </section>
+  <section class="section" id="categories">
+    <div class="section-head"><div><div class="kicker">Explore your interests</div><h2>Finde deinen nächsten Favoriten.</h2></div><p class="sub">Stöbere durch Ideen für deinen Schreibtisch, dein Gaming-Setup und deinen Alltag.</p></div>
+    <div class="filters" role="group" aria-label="Produkte filtern">
+      <button class="filter active" data-filter="all">Alle Ideen</button><button class="filter" data-filter="gaming">Gaming</button><button class="filter" data-filter="desk">Smart Desk</button><button class="filter" data-filter="tech">Tech Finds</button>
+    </div>
+  </section>
+  <section id="discover">
+    <div class="grid" id="products">
+      <article class="product glass" data-category="gaming" data-search="gaming maus gaming setup zubehör">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=80" alt="Computermaus auf dunklem Hintergrund"><span class="tag">GAMING</span></div>
+        <div class="product-body"><h3>Gaming Essentials</h3><p>Ideen für präzises Spielen und ein aufgeräumtes Setup.</p><div class="product-foot"><span>Setup verbessern</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+      <article class="product glass" data-category="desk" data-search="schreibtisch organisation organizer arbeitsplatz">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80" alt="Aufgeräumter Schreibtisch mit Computer"><span class="tag">SMART DESK</span></div>
+        <div class="product-body"><h3>Smart Desk</h3><p>Kleine Helfer für mehr Ordnung und einen angenehmen Arbeitsplatz.</p><div class="product-foot"><span>Mehr Ordnung</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+      <article class="product glass" data-category="tech" data-search="technik gadgets kopfhörer audio elektronik">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80" alt="Kopfhörer als Technik-Gadget"><span class="tag">TECH FINDS</span></div>
+        <div class="product-body"><h3>Tech Finds</h3><p>Technik und Zubehör, das sich im Alltag als nützlich erweisen kann.</p><div class="product-foot"><span>Clever unterwegs</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+      <article class="product glass" data-category="desk" data-search="led licht ambient zimmer beleuchtung">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80" alt="Moderne stimmungsvolle Beleuchtung"><span class="tag">ROOM UPGRADE</span></div>
+        <div class="product-body"><h3>Room Upgrade</h3><p>Inspiration für Licht, Atmosphäre und persönliche Akzente.</p><div class="product-foot"><span>Dein Raum, dein Stil</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+      <article class="product glass" data-category="tech" data-search="ladegerät kabel powerbank handy zubehör">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=80" alt="Elektronisches Zubehör"><span class="tag">EVERYDAY TECH</span></div>
+        <div class="product-body"><h3>Everyday Tech</h3><p>Praktische Zubehör-Ideen für deine täglichen Geräte.</p><div class="product-foot"><span>Alltag vereinfachen</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+      <article class="product glass" data-category="gaming" data-search="controller gaming setup spiele zubehör">
+        <div class="product-img"><img loading="lazy" src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=700&q=80" alt="Gaming-Controller"><span class="tag">PLAY BETTER</span></div>
+        <div class="product-body"><h3>Play Better</h3><p>Inspiration rund um Controller, Zubehör und Gaming-Komfort.</p><div class="product-foot"><span>Für deine Spielzeit</span><button class="mini-btn" data-note="Hier später einen geprüften Affiliate-Link einfügen.">Details ↗</button></div></div>
+      </article>
+    </div>
+    <p class="empty" id="empty">Keine passenden Ideen gefunden. Versuch einen anderen Suchbegriff.</p>
+    <p class="notice">Hinweis: Diese Produktkarten sind zunächst Beispielinhalte und keine konkreten Kaufempfehlungen. Es sind noch keine Affiliate-Links hinterlegt.</p>
+  </section>
+  <section class="promo glass" id="pinterest">
+    <div><div class="kicker">Save it. Find it. Love it.</div><h2>Dein nächstes Setup beginnt mit einer Idee.</h2><p>Entdecke visuelle Guides, Gadget-Listen und Inspirationen. Folge Verlgen auf Pinterest, Instagram und TikTok, sobald deine Profile eingerichtet sind.</p></div>
+    <div class="socials"><a class="social" href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest ↗</a><a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="social" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div>
+  </section>
+</main>
+<footer><div class="wrap"><div class="footrow"><a class="brand" href="#top"><span class="logo">V✦</span><span>VERLGEN</span></a><div class="footlinks"><a href="#top">Nach oben ↑</a><a href="mailto:hello@example.com" id="contact">Kontakt (Platzhalter)</a></div></div><p>Transparenz: Verlgen ist in diesem Entwurf eine Produktentdeckungs-Seite. Wenn später Affiliate-Links eingebaut werden, müssen diese klar gekennzeichnet werden. Es können Provisionen entstehen, wenn über solche Links eingekauft wird.</p><p>Vor einer Veröffentlichung müssen Kontaktangaben, Impressum, Datenschutzhinweise, Bildrechte und alle rechtlichen Anforderungen ergänzt bzw. geprüft werden. Diese Demo ist kein fertiger, rechtlich geprüfter Shop.</p><p>© <span id="year"></span> Verlgen · Discover something better.</p></div></footer>
+<script>
+const search=document.getElementById('search'),cards=[...document.querySelectorAll('.product')],filters=[...document.querySelectorAll('.filter')],empty=document.getElementById('empty');let category='all';
+function update(){let count=0;const q=search.value.trim().toLowerCase();cards.forEach(c=>{const okCat=category==='all'||c.dataset.category===category;const okText=!q||(c.dataset.search+' '+c.innerText).toLowerCase().includes(q);c.style.display=okCat&&okText?'':'none';if(okCat&&okText)count++});empty.style.display=count?'none':'block'}
+filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));b.classList.add('active');category=b.dataset.filter;update()}));search.addEventListener('input',update);
+document.querySelectorAll('[data-note]').forEach(b=>b.addEventListener('click',()=>alert('Verlgen ist noch im Aufbau. '+b.dataset.note)));
+document.getElementById('menu').addEventListener('click',()=>document.querySelector('header').classList.toggle('nav-open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('header').classList.remove('nav-open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
